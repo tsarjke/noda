@@ -1,0 +1,9 @@
+<form class="welcome__form form">
+  <div class="form__fields">
+    <app-select placeholder="Select your business type" [options]="options"/>
+    <app-text-input placeholder="E-mail"/>
+    <app-text-input placeholder="Phone number"/>
+  </div>
+  <app-checkbox label="I have Noda account"/>
+  <app-button [hasArrow]="true" [customStyle]="{width: '100%'}">Start using Noda Payment links</app-button>
+</form>
