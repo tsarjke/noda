@@ -1,0 +1,6 @@
+<button class="button {{mode}}"
+        [ngStyle]="customStyle"
+        [ngClass]="{'with-arrow': hasArrow}"
+        [disabled]="disabled">
+  <ng-content/>
+</button>
