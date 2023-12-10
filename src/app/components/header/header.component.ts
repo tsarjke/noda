@@ -18,7 +18,7 @@ export class HeaderComponent {
 
   toggleHtmlClass() {
     const htmlElement = this.document.documentElement;
-    if (this.isMenuOpen) {
+    if (this.isExpanded) {
       this.renderer.addClass(htmlElement, 'no-scroll');
     } else {
       this.renderer.removeClass(htmlElement, 'no-scroll');

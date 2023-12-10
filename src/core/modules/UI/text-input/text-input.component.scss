@@ -50,7 +50,7 @@
     }
 
     &:focus, &:not(:placeholder-shown) {
-      @include adaptive-padding(8, 0, 1.6, 0);
+      @include adaptive-padding(0.8, 0, 1.6, 0);
       padding-top: 1.2rem!important;
 
       & + .text-input__name {
