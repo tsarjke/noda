@@ -35,7 +35,7 @@
     <nav class="header__nav nav" [ngClass]="{'opened': this.isExpanded}">
       <ul class="nav__list">
         <li class="nav__item"><span class="nav__item-link" (mouseenter)="setMenuStatus(true)"
-                                    (click)="setMenuStatus(!isMenuOpen)">Products</span>
+                                    (touchend)="setMenuStatus(!isMenuOpen)">Products</span>
           <div class="nav__menu panel" [ngClass]="{'opened': this.isMenuOpen}">
             <div class="panel__wrapper">
               <div class="panel__block" *ngFor="let block of blocks">
