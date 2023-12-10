@@ -1,0 +1,83 @@
+@import '../../../../assets/mixins';
+
+.checkbox {
+  display: block;
+  position: relative;
+
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &:not(:disabled) + .checkbox__btn {
+      cursor: pointer;
+    }
+
+    &:disabled + .checkbox__btn {
+      border-color: #C9CCD8;
+      background-color: #F7F9FC;
+    }
+
+    &:disabled:checked + .checkbox__btn {
+      &:after {
+        background-image: url('data:image/svg+xml,%3csvg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"%3e%3cpath d="M6.08484 10.9606L3.22121 8.09697L2.26666 9.05152L6.08484 12.8697L14.2667 4.68788L13.3121 3.73334L6.08484 10.9606Z" fill="%23C9CCD8"/%3e%3c/svg%3e');
+      }
+    }
+
+    &:not(:disabled):checked + .checkbox__btn {
+      background-color: #6936D3;
+
+      &:after {
+        background-image: url('data:image/svg+xml,%3csvg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"%3e%3cpath d="M6.08484 10.9606L3.22121 8.09697L2.26666 9.05152L6.08484 12.8697L14.2667 4.68788L13.3121 3.73334L6.08484 10.9606Z" fill="%23FFFFFF"/%3e%3c/svg%3e');
+      }
+
+      &:hover:after {
+        background-color: #947AFF;
+      }
+
+      &:active:after {
+        background-color: #4A16B5;
+      }
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border: 1px solid #A3A7BD;
+    border-radius: 2px;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100%;
+    }
+
+    &:hover {
+      border-color: #947AFF;
+    }
+
+    &:active {
+      border-color: #4A16B5;
+    }
+  }
+
+  &__label {
+    margin-left: 23px;
+    color: #1D2445;
+    @include adaptive-prop('font-size', 1.6, 1.7);
+    line-height: 120%;
+  }
+}

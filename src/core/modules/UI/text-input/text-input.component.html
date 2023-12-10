@@ -1,0 +1,5 @@
+<div class="text-input">
+  <input class="text-input__value" type="text" [disabled]="disabled" [placeholder]="placeholder" [(ngModel)]="model">
+  <span class="text-input__name" [ngClass]="{'error': error.length}">{{ placeholder }}</span>
+  <span *ngIf="error" class="text-input__error">{{ error }}</span>
+</div>

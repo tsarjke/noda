@@ -1,0 +1,93 @@
+@import '../../../../assets/mixins';
+
+.select {
+  position: relative;
+  width: 100%;
+  @include adaptive-prop('font-size', 1.6, 1.7);
+  color: #000;
+
+  &__button {
+    @include adaptive-prop('min-height', 4.4, 5.6);
+    width: 100%;
+    background-color: #FFFFFF;
+    @include adaptive-padding(0.8, 0, 1.6, 0);
+    border-radius: 4px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__value {
+    @include adaptive-prop('font-size', 1.6, 1.7);
+    line-height: 120%;
+
+    &.placeholder {
+      color: #A3A7BD;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform ease-in-out 0.3s;
+  }
+
+  &__dropdown {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #F7F9FC;
+    border-radius: 4px;
+    max-height: 25rem;
+    overflow-y: auto;
+    transition: 0.5s ease;
+    transform: scaleY(0);
+    visibility: hidden;
+    transform-origin: top;
+  }
+
+  &__dropdown-item {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    & label {
+      width: 100%;
+      @include adaptive-padding(0.8, 0.8, 1.6, 1.8);
+      cursor: pointer;
+    }
+
+    & input[type="radio"] {
+      position: absolute;
+      left: 0;
+      opacity: 0;
+
+      &:focus ~ label {
+        background-color: #F7F9FC;
+      }
+    }
+
+    &:hover {
+      background-color: #F7F9FC;
+    }
+  }
+
+  &.active {
+
+    & .select__arrow {
+      transform: rotate(180deg);
+    }
+
+    & .select__dropdown {
+      visibility: visible;
+      transform: scaleY(1);
+      transform-origin: bottom;
+    }
+  }
+}

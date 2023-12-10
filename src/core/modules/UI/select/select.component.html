@@ -1,0 +1,18 @@
+<div class="select" [ngClass]="{'active': isSelectOpen}" (click)="isSelectOpen = !isSelectOpen">
+  <button class="select__button">
+    <span class="select__value" [ngClass]="{'placeholder': !modelValue}">{{ modelValue ? modelValue.text : placeholder }}</span>
+    <div class="select__arrow">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12.1492 15.0384L6.49536 9.38464L7.54919 8.33081L12.1492 12.9308L16.7492 8.33081L17.803 9.38464L12.1492 15.0384Z"
+          fill="#A3A7BD"/>
+      </svg>
+    </div>
+  </button>
+  <ul class="select__dropdown">
+    <li class="select__dropdown-item" *ngFor="let option of options">
+      <input type="radio" [id]="option.value" name="business-type" (keyup.enter)="setValue(option)"/>
+      <label [for]="option.value" (click)="setValue(option)">{{ option.text }}</label>
+    </li>
+  </ul>
+</div>
