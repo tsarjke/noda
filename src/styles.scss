@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'assets/null';
+@import 'assets/mixins';
+
+html, body {
+  font-family: Inter, serif;
+}
+
+html.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+section {
+  min-height: calc(100vh - 60px);
+}
+
+.section-title {
+  @include adaptive-prop('font-size', 3.6, 4.8);
+}
