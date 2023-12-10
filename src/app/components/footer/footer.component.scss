@@ -1,0 +1,120 @@
+@import '../../../assets/mixins';
+
+.footer {
+  background-color: #29304D;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    @include adaptive-prop('gap', 2, 8);
+    @include adaptive-padding(2, 2, 15, 10);
+    @include adaptive-prop('padding-bottom', 5, 10);
+  }
+
+  &__icon-link:hover {
+    svg path:not(#special-dot) {
+      fill: #947AFF;
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.6rem;
+    grid-row-gap: 3.2rem;
+  }
+
+  &__contact-btn {
+    width: 100%;
+  }
+
+  &__contact-list-btn {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+
+    &__info {
+      display: grid;
+      flex: 1 0 auto;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__contact-list-btn {
+      display: block;
+    }
+
+    &__contact-btn {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__content {
+      flex-direction: row;
+    }
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  @include adaptive-prop('gap', 1.2, 1.6);
+
+  &__header {
+    color: #FFFFFF;
+    font-family: Inter, serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 173.5%;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    @include adaptive-prop('gap', 0.6, 1.2);
+  }
+
+  &__item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  &__item-link {
+    display: inline-block;
+    position: relative;
+    color: #F7F9FC;
+    font-family: Inter, serif;
+    font-size: 1.4rem;
+    line-height: 150%;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      transform: scaleX(0);
+      background: linear-gradient(90deg, #F16F6F 0.05%, #6936D3 99.95%);
+      transform-origin: bottom right;
+      transition: transform .2s;
+    }
+
+    &:hover {
+      background: linear-gradient(90deg, #F16F6F 0.05%, #6936D3 99.95%);
+      transition: all .2s;
+      color: transparent;
+      background-clip: text;
+    }
+
+    &:hover:after {
+      transform: scaleX(1);
+      transition: transform .2s;
+      transform-origin: bottom left;
+    }
+  }
+}
