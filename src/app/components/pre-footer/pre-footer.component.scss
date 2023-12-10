@@ -1,0 +1,51 @@
+@import '../../../assets/mixins';
+
+.pre-footer {
+  background-color: #29304D;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    @include adaptive-prop('gap', 2.4, 4);
+    @include adaptive-padding(2, 2, 15, 10);
+  }
+
+  &__title {
+    color: #FFFFFF;
+    font-weight: 700;
+    line-height: 120%;
+    margin-bottom: 0.8rem;
+  }
+
+  &__text {
+    color: #FFFFFF;
+    font-size: 16px;
+    @include adaptive-prop('font-size', 1.6, 2);
+    line-height: 140%;
+    @include adaptive-prop('margin-bottom', 2, 4);
+  }
+
+  @media (min-width: 768px) {
+    &__content {
+      flex-direction: row;
+    }
+
+    &__carousel {
+      width: 50%;
+    }
+  }
+}
+
+.carousel {
+  &__card {
+    width: 100%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+    &:before {
+      content: '';
+      display: block;
+      @include adaptive-prop('padding-top', 30, 40);
+    }
+  }
+}

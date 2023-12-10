@@ -1,0 +1,19 @@
+<section class="pre-footer">
+  <div class="pre-footer__content">
+    <div class="pre-footer__info">
+      <h2 class="pre-footer__title section-title">Let’s start!</h2>
+      <p class="pre-footer__text">Create customized payment pages effortlessly using our chatbot. Answer a few
+        questions about your company and industry, and our chatbot will generate tailored payment pages that
+        perfectly match your needs.</p>
+      <app-button [hasArrow]="true">Create with Noda</app-button>
+    </div>
+    <div class="pre-footer__carousel">
+      <swiper-container appSwiper #swiper [config]="swiperConfig">
+        <swiper-slide *ngFor="let item of contents">
+          <div class="carousel__card"
+               [ngStyle]="{background: 'url(assets/img/carousel/' + item.name +') 0 0/100% auto no-repeat'}"></div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+</section>
