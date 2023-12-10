@@ -1,0 +1,18 @@
+$maxWidth: 144;
+@mixin adaptive-prop($property, $minSize, $maxSize) {
+  $addSize: $maxSize - $minSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+  @media (min-width: 76.7rem) {
+    #{$property}: calc(#{$minSize + rem} + #{$addSize} * (100vw / #{$maxWidth}));
+  }
+  @media (max-width: 76.7rem) {
+    #{$property}: calc(#{$minSize + rem} + #{$addMobSize} * ((100vw - 37.5rem) / #{$maxWidth}));
+  }
+}
+
+@mixin adaptive-padding($minSizeHor, $minSizeVert, $maxSizeHor, $maxSizeVert) {
+  @include adaptive-prop('padding-left', $minSizeHor, $maxSizeHor);
+  @include adaptive-prop('padding-right', $minSizeHor, $maxSizeHor);
+  @include adaptive-prop('padding-top', $minSizeVert, $maxSizeVert);
+  @include adaptive-prop('padding-bottom', $minSizeVert, $maxSizeVert);
+}
