@@ -1,7 +1,7 @@
 @import '../../../assets/mixins';
 
 .footer {
-  background-color: #29304D;
+  background-color: var(--Noda-Bg);
 
   &__content {
     display: flex;
@@ -13,7 +13,7 @@
 
   &__icon-link:hover {
     svg path:not(#special-dot) {
-      fill: #947AFF;
+      fill: var(--Noda-Plum-Light);
     }
   }
 
@@ -62,7 +62,7 @@
   @include adaptive-prop('gap', 1.2, 1.6);
 
   &__header {
-    color: #FFFFFF;
+    color: var(--Noda-White);
     font-family: Inter, serif;
     font-size: 1.4rem;
     font-weight: 600;
@@ -85,7 +85,7 @@
   &__item-link {
     display: inline-block;
     position: relative;
-    color: #F7F9FC;
+    color: var(--Noda-White-Second);
     font-family: Inter, serif;
     font-size: 1.4rem;
     line-height: 150%;
@@ -99,13 +99,13 @@
       height: 1px;
       width: 100%;
       transform: scaleX(0);
-      background: linear-gradient(90deg, #F16F6F 0.05%, #6936D3 99.95%);
+      background: var(--Noda-Pink-Plum-Grad);
       transform-origin: bottom right;
       transition: transform .2s;
     }
 
     &:hover {
-      background: linear-gradient(90deg, #F16F6F 0.05%, #6936D3 99.95%);
+      background: var(--Noda-Pink-Plum-Grad);
       transition: all .2s;
       color: transparent;
       background-clip: text;

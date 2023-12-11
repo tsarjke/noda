@@ -4,12 +4,12 @@
   position: relative;
   width: 100%;
   @include adaptive-prop('font-size', 1.6, 1.7);
-  color: #000;
+  color: var(--Noda-Dark-Text);
 
   &__button {
     @include adaptive-prop('min-height', 4.4, 5.6);
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: var(--Noda-White);
     @include adaptive-padding(0.8, 0, 1.6, 0);
     border-radius: 4px;
     cursor: pointer;
@@ -24,7 +24,7 @@
     line-height: 120%;
 
     &.placeholder {
-      color: #A3A7BD;
+      color: var(--Noda-Lignt-Blue-Gray);
     }
   }
 
@@ -39,8 +39,8 @@
     position: absolute;
     z-index: 100;
     width: 100%;
-    background-color: #fff;
-    border: 1px solid #F7F9FC;
+    background-color: var(--Noda-White);
+    border: 1px solid var(--Noda-White-Second);
     border-radius: 4px;
     max-height: 25rem;
     overflow-y: auto;
@@ -69,12 +69,12 @@
       opacity: 0;
 
       &:focus ~ label {
-        background-color: #F7F9FC;
+        background-color: var(--Noda-White-Second);
       }
     }
 
     &:hover {
-      background-color: #F7F9FC;
+      background-color: var(--Noda-White-Second);
     }
   }
 

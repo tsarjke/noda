@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--Noda-Third-Trans-Black);
 
   &__content {
     @include adaptive-padding(1, 0, 3, 0);
@@ -18,7 +18,7 @@
 
   &__title {
     @include adaptive-prop('font-size', 4, 5.8);
-    color: #FFFFFF;
+    color: var(--Noda-White);
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
@@ -27,7 +27,7 @@
   }
 
   &__subtitle{
-    color: #DDE3E9;
+    color: var(--Noda-White-Side);
     text-align: center;
     @include adaptive-prop('font-size', 1.5, 2);
     font-weight: 400;

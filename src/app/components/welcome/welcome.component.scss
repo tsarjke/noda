@@ -19,7 +19,7 @@
   }
 
   &__title {
-    color: #1B263F;
+    color: var(--Noda-Dark-Text);
     font-weight: 700;
     line-height: 120%;
   }
@@ -31,13 +31,13 @@
   }
 
   &__subtitle {
-    color: #1D2445;
+    color: var(--Noda-Dark-Text);
     @include adaptive-prop('font-size', 1.8, 2.4);
     line-height: 140%;
   }
 
   &__paragraph {
-    color: #1D2445;
+    color: var(--Noda-Dark-Text);
     @include adaptive-prop('font-size', 1.4, 1.8);
     line-height: 140%;
   }

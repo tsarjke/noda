@@ -2,25 +2,25 @@
 
 .button {
   display: inline-block;
-  color: #FFFFFF;
+  color: var(--Noda-White);
   min-width: 100px;
   padding: 1.2rem 2.4rem;
   @include adaptive-prop('font-size', 1.4, 2);
 
   &.main {
-    background: #6936D3;
+    background: var(--Noda-Plum);
     border-radius: 4px;
 
     &:hover {
-      background: #947AFF;
+      background: var(--Noda-Plum-Light);
     }
 
     &:active {
-      background: #4A16B5;
+      background: var(--Noda-Plum-Dark);
     }
 
     &:disabled {
-      background: #C9CCD8;
+      background: var(--Noda-Lignt-Gray);
     }
   }
 
@@ -31,20 +31,20 @@
 
     background: transparent;
     border-radius: 2px;
-    color: #F7F9FC;
-    border: 1px solid rgba(255, 255, 255, 0.50);
+    color: var(--Noda-White-Second);
+    border: 1px solid var(--Noda-Half-Trans-White);
     transition: background-color .2s;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: var(--Noda-10-Trans-White);
     }
 
     &:active {
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: var(--Noda-20-Trans-White);
     }
 
     &:disabled {
-      background: #C9CCD8;
+      background: var(--Noda-Lignt-Gray);
     }
   }
 
@@ -56,8 +56,8 @@
     font-weight: 500;
     line-height: 2.4rem;
     border-radius: 34px;
-    background: linear-gradient(90deg, #6936D3 0.05%, #F16F6F 99.95%);
-    color: #FFFFFF;
+    background: var(--Noda-Plum-Pink-Grad);
+    color: var(--Noda-White);
     overflow: hidden;
 
     &:before {
@@ -70,7 +70,7 @@
       width: 100%;
       height: 100%;
       transition: opacity .5s;
-      background: linear-gradient(90deg, #F16F6F 0.05%, #6936D3 99.95%);
+      background: var(--Noda-Pink-Plum-Grad);
     }
 
     &:hover:before {

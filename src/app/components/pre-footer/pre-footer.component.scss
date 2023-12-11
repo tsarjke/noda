@@ -1,7 +1,7 @@
 @import '../../../assets/mixins';
 
 .pre-footer {
-  background-color: #29304D;
+  background-color: var(--Noda-Bg);
 
   &__content {
     display: flex;
@@ -11,14 +11,14 @@
   }
 
   &__title {
-    color: #FFFFFF;
+    color: var(--Noda-White);
     font-weight: 700;
     line-height: 120%;
     margin-bottom: 0.8rem;
   }
 
   &__text {
-    color: #FFFFFF;
+    color: var(--Noda-White);
     font-size: 16px;
     @include adaptive-prop('font-size', 1.6, 2);
     line-height: 140%;
@@ -46,7 +46,7 @@
       content: '';
       display: block;
       @include adaptive-prop('padding-top', 30, 40);
-      background: linear-gradient(180deg, rgba(41, 48, 77, 0.00) 50%, #29304D 100%);
+      background: var(--Noda-Halfway-Dark-Grad);
     }
   }
 }
