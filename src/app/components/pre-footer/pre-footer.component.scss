@@ -46,6 +46,7 @@
       content: '';
       display: block;
       @include adaptive-prop('padding-top', 30, 40);
+      background: linear-gradient(180deg, rgba(41, 48, 77, 0.00) 50%, #29304D 100%);
     }
   }
 }
