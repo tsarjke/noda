@@ -78,12 +78,16 @@
     }
   }
 
-  &.with-arrow:after {
-    content: '→';
-    height: 100%;
-    vertical-align: center;
-    display: inline-block;
-    padding-left: 0.5rem;
+  &.with-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:after {
+      content: '→';
+      display: inline-block;
+      padding-left: 0.5rem;
+    }
   }
 
   &:disabled {
